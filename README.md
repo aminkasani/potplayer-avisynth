@@ -1,7 +1,7 @@
 # potplayer-avisynth
 potplayey avisynth frame interpolation 144hz
 
-
+```
 LoadPlugin("C:\Program Files (x86)\AviSynth+\plugins64\mvtools2.dll")
 LoadPlugin("C:\Program Files (x86)\AviSynth+\plugins64\masktools2.dll")
 Import("C:\Program Files (x86)\AviSynth+\scripts\Zs_RF_Shared.avsi")
@@ -18,5 +18,6 @@ forward_2 = MRecalculate(super, chroma=true, forward_1, blksize=16, searchparam=
 
 MDegrain2(super, backward_1, forward_1, backward_2, forward_2)
 
-MFlowFps(super , backward_2, forward_2, num=144, den=1)
+MFlowFps(super , backward_2, forward_2, num=0, den=1)
 Prefetch(12)
+```
