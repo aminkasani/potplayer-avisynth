@@ -18,6 +18,15 @@ forward_2 = MRecalculate(super, chroma=true, forward_1, blksize=16, searchparam=
 
 MDegrain2(super, backward_1, forward_1, backward_2, forward_2)
 
-MFlowFps(super , backward_2, forward_2, num=0, den=1)
+MFlowFps(super , backward_2, forward_2, num=144, den=1)
 Prefetch(12)
+```
+
+for doubling frame change 
+```
+MFlowFps(super , backward_2, forward_2, num=144, den=1)
+```
+to
+```
+MFlowFps(super , backward_2, forward_2, num=0, den=1)
 ```
